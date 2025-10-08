@@ -38,6 +38,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_iconly: ^1.0.2
   google_fonts: ^6.3.2
+  fancy_shimmer_image: ^2.0.3
+  shimmer: ^3.0.0
+  card_swiper: ^3.0.0
 
   #  Management
   provider: ^6.1.5+1

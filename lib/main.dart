@@ -60,7 +60,7 @@ class _MyAppState extends State<MyApp> {
                   context,
                 ),
                 home: const HomeScreen(),
-                routes: {},
+                routes: const {},
               );
             },
           ),
