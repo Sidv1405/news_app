@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app/consts/vars.dart';
+import 'package:news_app/inner_screens/search_screen.dart';
 import 'package:news_app/widget/articles_widgets.dart';
 import 'package:news_app/widget/drawer_widget.dart';
 import 'package:news_app/widget/tabs.dart';
 import 'package:news_app/widget/top_trending.dart';
 import 'package:news_app/widget/vertical_spacing.dart';
+import 'package:page_transition/page_transition.dart';
 
 import '../services/utils.dart';
 
@@ -45,7 +47,20 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           actions: [
-            IconButton(onPressed: () {}, icon: const Icon(IconlyBroken.search)),
+            IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.rightToLeft,
+                    inheritTheme: true,
+                    ctx: context,
+                    child: const SearchScreen()
+                  ),
+                );
+              },
+              icon: const Icon(IconlyBroken.search),
+            ),
           ],
         ),
         drawer: const DrawerWidget(),
